@@ -26,10 +26,12 @@ player.onChat("Up", function (Lv) {
     for (let index = 0; index < Lv; index++) {
         builder.place(WATER)
         builder.shift(0, 1, 0)
+        loops.pause(100)
     }
     for (let index = 0; index < Lv; index++) {
         builder.place(POWDER_SNOW)
         builder.shift(0, -1, 0)
+        loops.pause(100)
     }
     for (let index = 0; index < Lv; index++) {
         blocks.place(AIR, positions.add(
@@ -49,6 +51,10 @@ player.onChat("Up", function (Lv) {
         pos(0, 0, -1)
         ))
     }
+    builder.shift(0, Lv + 1, 0)
+    builder.place(WATER)
+    loops.pause(100)
+    builder.place(AIR)
     player.say("快來看看我的水電梯")
 })
 let 起點: Position = null
