@@ -31,6 +31,25 @@ player.onChat("Up", function (Lv) {
         builder.place(POWDER_SNOW)
         builder.shift(0, -1, 0)
     }
+    for (let index = 0; index < Lv; index++) {
+        blocks.place(AIR, positions.add(
+        起點,
+        pos(1, 0, 0)
+        ))
+        blocks.place(AIR, positions.add(
+        起點,
+        pos(-1, 0, 0)
+        ))
+        blocks.place(AIR, positions.add(
+        起點,
+        pos(0, 0, 1)
+        ))
+        blocks.place(AIR, positions.add(
+        起點,
+        pos(0, 0, -1)
+        ))
+    }
+    player.say("快來看看我的水電梯")
 })
 let 起點: Position = null
 起點 = world(2, 81, 7)
